@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530202604) do
+ActiveRecord::Schema.define(version: 20170604100135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,8 +31,18 @@ ActiveRecord::Schema.define(version: 20170530202604) do
     t.string   "email"
     t.string   "role"
     t.string   "position"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "login"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.string   "login_count"
+    t.string   "last_request_at"
+    t.string   "last_login_at"
+    t.string   "current_login_at"
+    t.string   "last_login_ip"
+    t.string   "current_login_ip"
   end
 
   create_table "users_teams", force: :cascade do |t|
