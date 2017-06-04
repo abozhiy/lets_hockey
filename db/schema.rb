@@ -25,13 +25,14 @@ ActiveRecord::Schema.define(version: 20170604101100) do
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
-    t.string   "second_name"
+    t.string   "last_name"
     t.string   "nickname"
     t.string   "phone"
     t.string   "email"
     t.string   "position"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.string   "middle_name"
     t.string   "login"
     t.string   "crypted_password"
     t.string   "password_salt"

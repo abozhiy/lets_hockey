@@ -1,5 +1,7 @@
 class AddAuthlogicColumnsToUsers < ActiveRecord::Migration
   def change
+    rename_column :users, :second_name, :last_name
+    add_column :users, :middle_name, :string
     add_column :users, :login, :string
     add_column :users, :crypted_password, :string
     add_column :users, :password_salt, :string
