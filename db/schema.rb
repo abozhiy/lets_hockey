@@ -30,16 +30,17 @@ ActiveRecord::Schema.define(version: 20170604101100) do
     t.string   "phone"
     t.string   "email"
     t.string   "position"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "login"
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
-    t.string   "login_count"
-    t.string   "last_request_at"
-    t.string   "last_login_at"
-    t.string   "current_login_at"
+    t.integer  "login_count",        default: 0, null: false
+    t.integer  "failed_login_count", default: 0, null: false
+    t.datetime "last_request_at"
+    t.datetime "last_login_at"
+    t.datetime "current_login_at"
     t.string   "last_login_ip"
     t.string   "current_login_ip"
   end
