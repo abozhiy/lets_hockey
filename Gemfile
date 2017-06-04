@@ -23,3 +23,5 @@ group :development do
   gem 'spring'
 end
 
+# Authorization
+gem 'authlogic', '3.4.6'
