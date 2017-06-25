@@ -13,10 +13,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(users_params)
     if @user.save
-      flash[:alert] = "User was successfuly created"
+      # flash[:alert] = "User was successfuly created"
       redirect_to root_path
     else
-      flash[:alert] = "User wasn't created, try again"
+      # flash[:alert] = "User wasn't created, try again"
       render action: :new
     end
   end

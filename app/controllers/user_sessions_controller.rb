@@ -14,17 +14,17 @@ class UserSessionsController < ApplicationController
 
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      flash[:notice] = "Successful signed in"
+      # flash[:notice] = "Successful signed in"
       redirect_to root_path
     else
-      flash[:notice] = "Unsuccessful signed in, try again or connect with support"
+      # flash[:notice] = "Unsuccessful signed in, try again or connect with support"
       render action: :new
     end
   end
 
   def destroy
     current_user_session.destroy
-    flash[:notice] = "Successful signed out"
+    # flash[:notice] = "Successful signed out"
     redirect_to new_user_sessions_path
   end
 
