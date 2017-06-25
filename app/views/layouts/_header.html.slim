@@ -1,0 +1,18 @@
+- unless current_page?(controller: 'user_sessions', action: 'new')
+  header.navbar.navbar-fixed-top
+    .navbar-inner
+      .container-fluid
+        = link_to "Let's hockey!", users_path, id: "logo"
+        nav
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-left
+              li.turnament
+                = link_to "Турниры", '#'
+              li
+                = link_to "Найти команду", '#'
+              li
+                = link_to "Profile", '#'
+            ul.nav.navbar-nav.navbar-right
+              - unless @current_user_session.nil?
+                li.sign_out
+                  = link_to "Sign out!", user_sessions_path, method: "delete"
