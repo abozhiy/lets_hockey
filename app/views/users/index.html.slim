@@ -1,8 +1,4 @@
 /= link_to 'Add new user', user
 
-
-
 - @users.each do |user|
   li = user.nickname
-
-= link_to 'Sign out', user_sessions_path, method: :delete
